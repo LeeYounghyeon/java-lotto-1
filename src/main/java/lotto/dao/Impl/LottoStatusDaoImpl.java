@@ -1,18 +1,21 @@
-package lotto.dao;
+package lotto.dao.Impl;
+
+import lotto.dao.JDBCTemplate;
+import lotto.dao.LottoStatusDao;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class LottoStatus implements LottoStatusDao {
-    private static LottoStatus lottoStatus;
+public class LottoStatusDaoImpl implements LottoStatusDao {
+    private static LottoStatusDaoImpl lottoStatusDaoImpl;
 
-    public static LottoStatus getInstance() {
-        if (Objects.isNull(lottoStatus)) {
-            lottoStatus = new LottoStatus();
+    public static LottoStatusDaoImpl getInstance() {
+        if (Objects.isNull(lottoStatusDaoImpl)) {
+            lottoStatusDaoImpl = new LottoStatusDaoImpl();
         }
-        return lottoStatus;
+        return lottoStatusDaoImpl;
     }
 
     public void addResultInfo(int lottoRound, double sum, String returnRate) {

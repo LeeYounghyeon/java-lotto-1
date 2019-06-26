@@ -4,7 +4,7 @@ import lotto.domain.UserLotto;
 
 import java.util.List;
 
-public interface LottoDao {
+public interface LottoInfoDao {
 
     void addLotto(UserLotto userLotto, int round);
 

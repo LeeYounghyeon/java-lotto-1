@@ -4,8 +4,6 @@ import lotto.controller.LottoController;
 
 public class WebUILottoApplication {
     public static void main(String[] args) {
-        LottoController lottoController = LottoController.getInstance();
-
-        lottoController.init();
+        LottoController.getInstance().init();
     }
 }

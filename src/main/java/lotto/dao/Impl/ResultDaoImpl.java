@@ -1,4 +1,7 @@
-package lotto.dao;
+package lotto.dao.Impl;
+
+import lotto.dao.JDBCTemplate;
+import lotto.dao.ResultDao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +9,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class Result implements ResultDao {
-    private static Result result;
+public class ResultDaoImpl implements ResultDao {
+    private static ResultDaoImpl result;
 
-    public static Result getInstance() {
+    public static ResultDaoImpl getInstance() {
         if (Objects.isNull(result)) {
-            result = new Result();
+            result = new ResultDaoImpl();
         }
         return result;
     }

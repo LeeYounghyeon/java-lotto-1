@@ -1,5 +1,6 @@
 package lotto.dao;
 
+import lotto.dao.Impl.LottoInfoDaoImpl;
 import lotto.domain.*;
 import lotto.domain.Number;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,9 +9,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-class LottoInfoTest {
+class LottoInfoImplTest {
     private List<Lotto> lotto;
-    private LottoInfo lottoInfo = LottoInfo.getInstance();
+    private LottoInfoDaoImpl lottoInfoImpl = LottoInfoDaoImpl.getInstance();
 
     @BeforeEach
     void setUp() {
@@ -28,16 +29,16 @@ class LottoInfoTest {
     @Test
     void addLotto() {
         UserLotto userLotto = new UserLotto(lotto, 4, new LottoNumberGenerator());
-        lottoInfo.addLotto(userLotto, 1);
+        lottoInfoImpl.addLotto(userLotto, 1);
     }
 
     @Test
     void offerMaxRound() {
-        System.out.println(lottoInfo.offerMaxRound());
+        System.out.println(lottoInfoImpl.offerMaxRound());
     }
 
     @Test
     void offerUserLottoNumber() {
-        System.out.println(lottoInfo.offerUserLottoNumber(1));
+        System.out.println(lottoInfoImpl.offerUserLottoNumber(1));
     }
 }

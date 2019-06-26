@@ -1,5 +1,7 @@
-package lotto.dao;
+package lotto.dao.Impl;
 
+import lotto.dao.JDBCTemplate;
+import lotto.dao.WinningLottoDao;
 import lotto.domain.WinningLotto;
 
 import java.util.ArrayList;
@@ -7,14 +9,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class WinningLottoInfo implements WinningLottoDao {
-    private static WinningLottoInfo winningLottoInfo;
+public class WinningLottoDaoImpl implements WinningLottoDao {
+    private static WinningLottoDaoImpl winningLottoDaoImpl;
 
-    public static WinningLottoInfo getInstance() {
-        if (Objects.isNull(winningLottoInfo)) {
-            winningLottoInfo = new WinningLottoInfo();
+    public static WinningLottoDaoImpl getInstance() {
+        if (Objects.isNull(winningLottoDaoImpl)) {
+            winningLottoDaoImpl = new WinningLottoDaoImpl();
         }
-        return winningLottoInfo;
+        return winningLottoDaoImpl;
     }
 
     public void addWinningLotto(WinningLotto winningLotto, int lottoRound) {

@@ -1,5 +1,7 @@
-package lotto.dao;
+package lotto.dao.Impl;
 
+import lotto.dao.JDBCTemplate;
+import lotto.dao.LottoInfoDao;
 import lotto.domain.Lotto;
 import lotto.domain.UserLotto;
 
@@ -9,14 +11,14 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class LottoInfo implements LottoDao {
-    private static LottoInfo lottoInfo;
+public class LottoInfoDaoImpl implements LottoInfoDao {
+    private static LottoInfoDaoImpl lottoInfoImpl;
 
-    public static LottoInfo getInstance() {
-        if (Objects.isNull(lottoInfo)) {
-            lottoInfo = new LottoInfo();
+    public static LottoInfoDaoImpl getInstance() {
+        if (Objects.isNull(lottoInfoImpl)) {
+            lottoInfoImpl = new LottoInfoDaoImpl();
         }
-        return lottoInfo;
+        return lottoInfoImpl;
     }
 
     public void addLotto(UserLotto userLotto, int round) {

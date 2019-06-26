@@ -1,9 +1,9 @@
 package lotto.service;
 
-import lotto.dao.LottoInfo;
-import lotto.dao.LottoStatus;
-import lotto.dao.Result;
-import lotto.dao.WinningLottoInfo;
+import lotto.dao.Impl.LottoInfoDaoImpl;
+import lotto.dao.Impl.LottoStatusDaoImpl;
+import lotto.dao.Impl.ResultDaoImpl;
+import lotto.dao.Impl.WinningLottoDaoImpl;
 import lotto.domain.*;
 import lotto.domain.Number;
 import lotto.dto.*;
@@ -16,10 +16,10 @@ public class LottoService {
     private static final int FIRST_INDEX = 0;
     private static final String RESULT_BONUS_FORMAT = "%d개 일치, 보너스 볼 일치(%d원) - %d개";
     private static final String RESULT_FORMAT = "%d개 일치 (%d원)- %d개";
-    private static final LottoInfo LOTTO_INFO = LottoInfo.getInstance();
-    private static final LottoStatus LOTTO_STATUS = LottoStatus.getInstance();
-    private static final Result RESULT = Result.getInstance();
-    private static final WinningLottoInfo WINNING_LOTTO_INFO = WinningLottoInfo.getInstance();
+    private static final LottoInfoDaoImpl LOTTO_INFO = LottoInfoDaoImpl.getInstance();
+    private static final LottoStatusDaoImpl LOTTO_STATUS = LottoStatusDaoImpl.getInstance();
+    private static final ResultDaoImpl RESULT = ResultDaoImpl.getInstance();
+    private static final WinningLottoDaoImpl WINNING_LOTTO_INFO = WinningLottoDaoImpl.getInstance();
 
     private static LottoService lottoService;
 
